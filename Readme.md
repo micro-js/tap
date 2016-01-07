@@ -23,6 +23,27 @@ var ten = log(10)
 
 ```
 
+## Why?
+
+Let's say you have a some kind of a reducing function in es2015 where you want to log a given `state`. Instead of refactoring it to a larger function you can just wrap it in a `tap(console)`
+
+```js
+const reducer = (state, action) => [...state, id: action.payload]
+
+// instead of
+
+const reducer = (state, action) => {
+  console.log(state)
+  return [...state, id: action.payload]
+}
+
+// you can just wrap it
+
+const reducer = (state, action) => [...log(state), id: action.payload]
+```
+
+This simplifies quick debugging a lot.
+
 ## API
 
 ### tap(fn)
