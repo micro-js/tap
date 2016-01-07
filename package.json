@@ -1,0 +1,15 @@
+{
+  "name": "@f/tap",
+  "description": "Runs a given function with the supplied object, then returns the object",
+  "repository": "git://github.com/micro-js/tap.git",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "postversion": "git push && git push --tags && npm publish --access=public"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "^4.2.2"
+  }
+}
